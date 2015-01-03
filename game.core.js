@@ -1,12 +1,3 @@
-//The main update loop runs on requestAnimationFrame,
-//Which falls back to a setTimeout loop on the server
-//Code below is from Three.js, and sourced from links below
-
-    // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
-    // http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
-
-    // requestAnimationFrame polyfill by Erik Möller
-    // fixes from Paul Irish and Tino Zijdel
 
 var frame_time = 60/1000; // run the local game at 16ms/ 60hz
 if('undefined' != typeof(global)) frame_time = 45; //on server we run at 45ms, 22hz
@@ -36,28 +27,18 @@ if('undefined' != typeof(global)) frame_time = 45; //on server we run at 45ms, 2
 
 }() );
 
-        //Now the main game class. This gets created on
-        //both server and client. Server creates one for
-        //each game that is hosted, and client creates one
-        //for itself to play the game.
-
 /* The game_core class */
 
     var game_core = function(game_instance){
 
-            //Store the instance, if any
         this.instance = game_instance;
-            //Store a flag if we are the server
         this.server = this.instance !== undefined;
 
-            //Used in collision etc.
         this.world = {
             width : 720,
             height : 480
         };
 
-            //We create a player set, passing them
-            //the game that is running them, as well
         if(this.server) {
 
             this.players = {
@@ -74,13 +55,9 @@ if('undefined' != typeof(global)) frame_time = 45; //on server we run at 45ms, 2
                 other : new game_player(this)
             };
 
-                //Debugging ghosts, to help visualise things
             this.ghosts = {
-                    //Our ghost position on the server
                 server_pos_self : new game_player(this),
-                    //The other players server position as we receive it
                 server_pos_other : new game_player(this),
-                    //The other players ghost destination position (the lerp)
                 pos_other : new game_player(this)
             };
 
@@ -99,49 +76,34 @@ if('undefined' != typeof(global)) frame_time = 45; //on server we run at 45ms, 2
             this.ghosts.server_pos_other.pos = { x:500, y:200 };
         }
 
-            //The speed at which the clients move.
         this.playerspeed = 120;
 
-            //Set up some physics integration values
         this._pdt = 0.0001;                 //The physics update delta time
         this._pdte = new Date().getTime();  //The physics update last delta time
-            //A local timer for precision on server and client
         this.local_time = 0.016;            //The local timer
         this._dt = new Date().getTime();    //The local timer delta
         this._dte = new Date().getTime();   //The local timer last frame time
 
-            //Start a physics loop, this is separate to the rendering
-            //as this happens at a fixed frequency
         this.create_physics_simulation();
 
-            //Start a fast paced timer for measuring time easier
         this.create_timer();
 
-            //Client specific initialisation
         if(!this.server) {
             
-                //Create a keyboard handler
             this.keyboard = new THREEx.KeyboardState();
 
-                //Create the default configuration settings
             this.client_create_configuration();
 
-                //A list of recent server updates we interpolate across
-                //This is the buffer that is the driving factor for our networking
             this.server_updates = [];
 
-                //Connect to the socket.io server!
             this.client_connect_to_server();
 
-                //We start pinging the server to determine latency
             this.client_create_ping_timer();
 
-                //Set their colors from the storage or locally
             this.color = localStorage.getItem('color') || '#cc8822' ;
             localStorage.setItem('color', this.color);
             this.players.self.color = this.color;
 
-                //Make this only if requested
             if(String(window.location).indexOf('debug') != -1) {
                 this.client_create_debug_gui();
             }
@@ -162,12 +124,7 @@ if( 'undefined' != typeof global ) {
 
 /*
     Helper functions for the game code
-
-        Here we have some common maths and game related code to make working with 2d vectors easy,
-        as well as some helpers for rounding numbers to fixed point.
-
 */
-
     // (4.22208334636).fixed(n) will return fixed point value to n places, default n = 3
 Number.prototype.fixed = function(n) { n = n || 3; return parseFloat(this.toFixed(n)); };
     //copies a 2d vector like object from one to another
@@ -187,18 +144,13 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
 
 /*
     The player class
-
-        A simple class to maintain state of a player on screen,
-        as well as to draw that state when required.
 */
 
     var game_player = function( game_instance, player_instance ) {
 
-            //Store the instance, if any
         this.instance = player_instance;
         this.game = game_instance;
 
-            //Set up initial values for our state information
         this.pos = { x:0, y:0 };
         this.size = { x:16, y:16, hx:8, hy:8 };
         this.state = 'not-connected';
@@ -206,15 +158,12 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
         this.info_color = 'rgba(255,255,255,0.1)';
         this.id = '';
 
-            //These are used in moving us around later
         this.old_state = {pos:{x:0,y:0}};
         this.cur_state = {pos:{x:0,y:0}};
         this.state_time = new Date().getTime();
 
-            //Our local history of inputs
         this.inputs = [];
 
-            //The world bounds we are confined to
         this.pos_limits = {
             x_min: this.size.hx,
             x_max: this.game.world.width - this.size.hx,
@@ -222,9 +171,6 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
             y_max: this.game.world.height - this.size.hy
         };
 
-            //The 'host' of a game gets created with a player instance since
-            //the server already knows who they are. If the server starts a game
-            //with only a host, the other player is set up in the 'else' below
         if(player_instance) {
             this.pos = { x:20, y:20 };
         } else {
@@ -235,45 +181,31 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
   
     game_player.prototype.draw = function(){
 
-            //Set the color for this player
         game.ctx.fillStyle = this.color;
 
-            //Draw a rectangle for us
         game.ctx.fillRect(this.pos.x - this.size.hx, this.pos.y - this.size.hy, this.size.x, this.size.y);
 
-            //Draw a status update
         game.ctx.fillStyle = this.info_color;
         game.ctx.fillText(this.state, this.pos.x+10, this.pos.y + 4);
     
     }; //game_player.draw
 
 /*
-
  Common functions
- 
-    These functions are shared between client and server, and are generic
-    for the game state. The client functions are client_* and server functions
-    are server_* so these have no prefix.
-
 */
 
-    //Main update loop
 game_core.prototype.update = function(t) {
     
-        //Work out the delta time
     this.dt = this.lastframetime ? ( (t - this.lastframetime)/1000.0).fixed() : 0.016;
 
-        //Store the last frame time
     this.lastframetime = t;
 
-        //Update the game specifics
     if(!this.server) {
         this.client_update();
     } else {
         this.server_update();
     }
 
-        //schedule the next update
     this.updateid = window.requestAnimationFrame( this.update.bind(this), this.viewport );
 
 }; //game_core.update
@@ -285,27 +217,22 @@ game_core.prototype.update = function(t) {
 */
 game_core.prototype.check_collision = function( item ) {
 
-        //Left wall.
     if(item.pos.x <= item.pos_limits.x_min) {
         item.pos.x = item.pos_limits.x_min;
     }
 
-        //Right wall
     if(item.pos.x >= item.pos_limits.x_max ) {
         item.pos.x = item.pos_limits.x_max;
     }
     
-        //Roof wall.
     if(item.pos.y <= item.pos_limits.y_min) {
         item.pos.y = item.pos_limits.y_min;
     }
 
-        //Floor wall
     if(item.pos.y >= item.pos_limits.y_max ) {
         item.pos.y = item.pos_limits.y_max;
     }
 
-        //Fixed point helps be more deterministic
     item.pos.x = item.pos.x.fixed(4);
     item.pos.y = item.pos.y.fixed(4);
     
@@ -314,14 +241,11 @@ game_core.prototype.check_collision = function( item ) {
 
 game_core.prototype.process_input = function( player ) {
 
-    //It's possible to have recieved multiple inputs by now,
-    //so we process each one
     var x_dir = 0;
     var y_dir = 0;
     var ic = player.inputs.length;
     if(ic) {
         for(var j = 0; j < ic; ++j) {
-                //don't process ones we already have simulated locally
             if(player.inputs[j].seq <= player.last_input_seq) continue;
 
             var input = player.inputs[j].inputs;
@@ -345,16 +269,12 @@ game_core.prototype.process_input = function( player ) {
         } //for each input command
     } //if we have inputs
 
-        //we have a direction vector now, so apply the same physics as the client
     var resulting_vector = this.physics_movement_vector_from_direction(x_dir,y_dir);
     if(player.inputs.length) {
-        //we can now clear the array since these have been processed
-
         player.last_input_time = player.inputs[ic-1].time;
         player.last_input_seq = player.inputs[ic-1].seq;
     }
 
-        //give it back
     return resulting_vector;
 
 }; //game_core.process_input
@@ -363,7 +283,6 @@ game_core.prototype.process_input = function( player ) {
 
 game_core.prototype.physics_movement_vector_from_direction = function(x,y) {
 
-        //Must be fixed step, at physics sync speed.
     return {
         x : (x * (this.playerspeed * 0.015)).fixed(3),
         y : (y * (this.playerspeed * 0.015)).fixed(3)
@@ -382,58 +301,42 @@ game_core.prototype.update_physics = function() {
 }; //game_core.prototype.update_physics
 
 /*
-
  Server side functions
- 
-    These functions below are specific to the server side only,
-    and usually start with server_* to make things clearer.
-
 */
 
-    //Updated at 15ms , simulates the world state
 game_core.prototype.server_update_physics = function() {
-
-        //Handle player one
     this.players.self.old_state.pos = this.pos( this.players.self.pos );
     var new_dir = this.process_input(this.players.self);
     this.players.self.pos = this.v_add( this.players.self.old_state.pos, new_dir );
 
-        //Handle player two
     this.players.other.old_state.pos = this.pos( this.players.other.pos );
     var other_new_dir = this.process_input(this.players.other);
     this.players.other.pos = this.v_add( this.players.other.old_state.pos, other_new_dir);
 
-        //Keep the physics position in the world
     this.check_collision( this.players.self );
     this.check_collision( this.players.other );
 
-    this.players.self.inputs = []; //we have cleared the input buffer, so remove this
-    this.players.other.inputs = []; //we have cleared the input buffer, so remove this
+    this.players.self.inputs = [];
+    this.players.other.inputs = [];
 
 }; //game_core.server_update_physics
 
-    //Makes sure things run smoothly and notifies clients of changes
-    //on the server side
 game_core.prototype.server_update = function(){
 
-        //Update the state of our local clock to match the timer
     this.server_time = this.local_time;
 
-        //Make a snapshot of the current state, for updating the clients
     this.laststate = {
-        hp  : this.players.self.pos,                //'host position', the game creators position
-        cp  : this.players.other.pos,               //'client position', the person that joined, their position
-        his : this.players.self.last_input_seq,     //'host input sequence', the last input we processed for the host
-        cis : this.players.other.last_input_seq,    //'client input sequence', the last input we processed for the client
-        t   : this.server_time                      // our current local time on the server
+        hp  : this.players.self.pos,                
+        cp  : this.players.other.pos,              
+        his : this.players.self.last_input_seq,   
+        cis : this.players.other.last_input_seq, 
+        t   : this.server_time                  
     };
 
-        //Send the snapshot to the 'host' player
     if(this.players.self.instance) {
         this.players.self.instance.emit( 'onserverupdate', this.laststate );
     }
 
-        //Send the snapshot to the 'client' player
     if(this.players.other.instance) {
         this.players.other.instance.emit( 'onserverupdate', this.laststate );
     }
