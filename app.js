@@ -67,9 +67,7 @@
             console.log('\t socket.io:: client disconnected ' + client.userid + ' ' + client.game_id);
             
             if(client.game && client.game.id) {
-
                 game_server.endGame(client.game.id, client.userid);
-
             } //client.game_id
 
         }); //client.on disconnect

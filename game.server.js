@@ -72,7 +72,6 @@
         
         this.log('player ' + player.userid + ' created a game with id ' + player.game.id);
         
-        log.console('game created');
         return thegame;
 
     }; //game_server.createGame
