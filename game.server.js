@@ -97,7 +97,7 @@
                         thegame.player_host.send('s.e');
                         thegame.player_host.hosting = false;
                         this.findGame(thegame.player_host);
-                    }
+                    //}
                 }
             }
 
