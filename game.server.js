@@ -35,9 +35,6 @@
             this.onInput(client, message_parts);
         } else if(message_type == 'p') {
             client.send('s.p.' + message_parts[1]);
-        } else if(message_type == 'c') {    //Client changed their color!
-            if(other_client)
-                other_client.send('s.c.' + message_parts[1]);
         } 
     }; //game_server.onMessage
 
@@ -59,6 +56,7 @@
                 player_host:player,         //so we know who initiated the game
                 player_client:null,         //nobody else joined yet, since its new
                 player_count:1              //for simple checking of state
+                hp : 5000
             };
 
         this.games[ thegame.id ] = thegame;

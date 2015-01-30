@@ -109,26 +109,13 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
         this.instance = player_instance;
         this.game = game_instance;
 
-        //this.pos = { x:0, y:0 };
-        //this.size = { x:16, y:16, hx:8, hy:8 };
         this.state = 'not-connected';
-        //this.color = 'rgba(255,255,255,0.1)';
-        //this.info_color = 'rgba(255,255,255,0.1)';
         this.id = '';
         this.smite_dmg = 1000;
 
-        //this.old_state = {pos:{x:0,y:0}};
-        //this.cur_state = {pos:{x:0,y:0}};
         this.state_time = new Date().getTime();
 
         this.inputs = [];
-
-        //this.pos_limits = {
-        //    x_min: this.size.hx,
-        //    x_max: this.game.world.width - this.size.hx,
-        //    y_min: this.size.hy,
-        //    y_max: this.game.world.height - this.size.hy
-        //};
 
     }; //game_player.constructor
 
@@ -136,9 +123,7 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
     game_player.prototype.draw = function(){
 
         game.ctx.fillStyle = this.color;
-        //game.ctx.fillRect(this.pos.x - this.size.hx, this.pos.y - this.size.hy, this.size.x, this.size.y);
-        game.ctx.fillStyle = this.info_color;
-        game.ctx.fillText(this.hp, 200, 400);
+        game.ctx.fillText(this.game.hp, 200, 300);
     
     }; //game_player.draw
  
@@ -176,7 +161,7 @@ game_core.prototype.process_input = function( player ) {
             for(var i = 0; i < c; ++i) {
                 var key = input[i];
                 if(key == 's') {
-                    this.hp = this.hp - this.smite_dmg;
+                    this.game.hp = this.game.hp - this.smite_dmg;
                 }
             } //for all input values
         } //for each input command
@@ -238,7 +223,7 @@ game_core.prototype.client_handle_input = function(){
     if( this.keyboard.pressed('D') ||
         this.keyboard.pressed('F')) {
             input.push('s');
-        } //left
+        } //smite
 
     if(input.length) {
 
@@ -258,7 +243,7 @@ game_core.prototype.client_handle_input = function(){
         this.socket.send(  server_packet  );
 
     } else {
-        return {x:0,y:0};
+        return {hp : this.hp};
     }
 }; //game_core.client_handle_input
 
@@ -268,25 +253,23 @@ game_core.prototype.client_process_net_prediction_correction = function() {
 
     var latest_server_data = this.server_updates[this.server_updates.length-1];
 
-    var my_server_pos = this.players.self.host ? latest_server_data.hp : latest_server_data.cp;
-
-        var my_last_input_on_server = this.players.self.host ? latest_server_data.his : latest_server_data.cis;
-        if(my_last_input_on_server) {
-            var lastinputseq_index = -1;
-            for(var i = 0; i < this.players.self.inputs.length; ++i) {
-                if(this.players.self.inputs[i].seq == my_last_input_on_server) {
-                    lastinputseq_index = i;
-                    break;
-                }
+    var my_last_input_on_server = this.players.self.host ? latest_server_data.his : latest_server_data.cis;
+    
+    if(my_last_input_on_server) {
+        var lastinputseq_index = -1;
+        for(var i = 0; i < this.players.self.inputs.length; ++i) {
+            if(this.players.self.inputs[i].seq == my_last_input_on_server) {
+                lastinputseq_index = i;
+                break;
             }
+        }
 
-            if(lastinputseq_index != -1) {
-                var number_to_clear = Math.abs(lastinputseq_index - (-1));
-                this.players.self.inputs.splice(0, number_to_clear);
-                this.players.self.last_input_seq = lastinputseq_index;
-                this.client_update_local_position();
-            } // if(lastinputseq_index != -1)
-        } //if my_last_input_on_server
+        if(lastinputseq_index != -1) {
+            var number_to_clear = Math.abs(lastinputseq_index - (-1));
+            this.players.self.inputs.splice(0, number_to_clear);
+            this.players.self.last_input_seq = lastinputseq_index;
+        } // if(lastinputseq_index != -1)
+    } //if my_last_input_on_server
 }; //game_core.client_process_net_prediction_correction
 
 game_core.prototype.client_process_net_updates = function() {
@@ -315,7 +298,7 @@ game_core.prototype.client_process_net_updates = function() {
         previous = this.server_updates[0];
     }
 
-     if(target && previous) {
+    if(target && previous) {
 
         this.target_time = target.t;
 
@@ -330,8 +313,8 @@ game_core.prototype.client_process_net_updates = function() {
         var latest_server_data = this.server_updates[ this.server_updates.length-1 ];
 
         var latest_hp = target.hp;
-        this.players.other.hp = latest_hp;
-        this.players.self.hp = latest_hp;
+        this.players.other.game.hp = latest_hp;
+        this.players.self.game.hp = latest_hp;
         
     } //if target && previous
 
