@@ -71,7 +71,8 @@
         player.hosting = true;
         
         this.log('player ' + player.userid + ' created a game with id ' + player.game.id);
-
+        
+        log.console('game created');
         return thegame;
 
     }; //game_server.createGame
@@ -112,6 +113,7 @@
     }; //game_server.endGame
 
     game_server.startGame = function(game) {
+        this.log('starting game');
         //game.player_client.send('s.j.' + game.player_host.userid);
         //game.player_client.game = game;
         //game.player_client.send('s.r.'+ String(game.gamecore.local_time).replace('.','-'));

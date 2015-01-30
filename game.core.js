@@ -40,19 +40,15 @@ if('undefined' != typeof(global)) frame_time = 45; //on server we run at 45ms, 2
         };
 
         if(this.server) {
-
             this.players = {
                 self : new game_player(this,this.instance.player_host),
                 other : new game_player(this,this.instance.player_client)
             };
-
         } else {
-
             this.players = {
                 self : new game_player(this),
                 other : new game_player(this)
             };
-
         }
 
         this.local_time = 0.016;            //The local timer
@@ -122,6 +118,7 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
         
     game_player.prototype.draw = function(){
 
+        console.log('trying to draw hp');
         game.ctx.fillStyle = this.color;
         game.ctx.fillText(this.game.hp.toString(), 200, 300);
         game.ctx.fillText("Pikachu", 100, 100);
