@@ -126,7 +126,9 @@
 
         var thegame = this.createGame(player); //one-player mode for now
         this.startGame(thegame);
+        return;
         
+        /*
         if(this.game_count) {
                 
             var joined_a_game = false;
@@ -151,5 +153,6 @@
         } else { //if there are any games at all
             this.createGame(player);
         }
+        */
     }; //game_server.findGame
 
