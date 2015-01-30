@@ -27,9 +27,9 @@
         var message_parts = message.split('.');
         var message_type = message_parts[0];
 
-        var other_client =
-            (client.game.player_host.userid == client.userid) ?
-                client.game.player_client : client.game.player_host;
+        //var other_client =
+        //    (client.game.player_host.userid == client.userid) ?
+        //        client.game.player_client : client.game.player_host;
 
         if(message_type == 'i') {
             this.onInput(client, message_parts);
@@ -85,6 +85,7 @@
 
             if(thegame.player_count > 1) {
 
+            /*
                 if(userid == thegame.player_host.userid) {
                     if(thegame.player_client) {
                         thegame.player_client.send('s.e');
@@ -92,7 +93,7 @@
                     }
                     
                 } else {
-                    if(thegame.player_host) {
+            */        if(thegame.player_host) {
                         thegame.player_host.send('s.e');
                         thegame.player_host.hosting = false;
                         this.findGame(thegame.player_host);
@@ -111,9 +112,9 @@
     }; //game_server.endGame
 
     game_server.startGame = function(game) {
-        game.player_client.send('s.j.' + game.player_host.userid);
-        game.player_client.game = game;
-        game.player_client.send('s.r.'+ String(game.gamecore.local_time).replace('.','-'));
+        //game.player_client.send('s.j.' + game.player_host.userid);
+        //game.player_client.game = game;
+        //game.player_client.send('s.r.'+ String(game.gamecore.local_time).replace('.','-'));
         game.player_host.send('s.r.'+ String(game.gamecore.local_time).replace('.','-'));
         game.active = true;
     }; //game_server.startGame
