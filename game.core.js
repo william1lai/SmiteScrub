@@ -183,7 +183,7 @@ game_core.prototype.server_update = function(){
     this.server_time = this.local_time;
 
     this.laststate = {
-        hp  : this.hp
+        hp  : this.hp,
         his : this.players.self.last_input_seq,   
         cis : this.players.other.last_input_seq, 
         t   : this.server_time                  
