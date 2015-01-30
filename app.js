@@ -12,10 +12,10 @@
 
     server.listen(gameport)
 
-    console.log('\t :: Express :: Listening on port ' + gameport );
+    //console.log('\t :: Express :: Listening on port ' + gameport );
 
     app.get( '/', function( req, res ){
-        console.log('trying to load %s', __dirname + '/index.html');
+        //console.log('trying to load %s', __dirname + '/index.html');
         res.sendfile( '/index.html' , { root:__dirname });
     });
 

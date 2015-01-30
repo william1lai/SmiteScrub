@@ -122,7 +122,7 @@
 
     game_server.findGame = function(player) {
 
-        this.log('looking for a game. We have : ' + this.game_count);
+        //this.log('looking for a game. We have : ' + this.game_count);
 
         var thegame = this.createGame(player); //one-player mode for now
         this.startGame(thegame);

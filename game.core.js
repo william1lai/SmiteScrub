@@ -199,6 +199,8 @@ game_core.prototype.server_update = function(){
 
 
 game_core.prototype.handle_server_input = function(client, input, input_time, input_seq) {
+    
+    console.log('got input');
 
     var player_client =
         (client.userid == this.players.self.instance.userid) ?
@@ -220,6 +222,7 @@ game_core.prototype.client_handle_input = function(){
 
     if( this.keyboard.pressed('D') ||
         this.keyboard.pressed('F')) {
+            console.log('smite used');
             input.push('s');
         } //smite
 
