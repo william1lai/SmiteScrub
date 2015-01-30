@@ -43,14 +43,14 @@ if('undefined' != typeof(global)) frame_time = 45; //on server we run at 45ms, 2
 
             this.players = {
                 self : new game_player(this,this.instance.player_host),
-                other : new game_player(this,this.instance.player_client)
+                //other : new game_player(this,this.instance.player_client)
             };
 
         } else {
 
             this.players = {
                 self : new game_player(this),
-                other : new game_player(this)
+                //other : new game_player(this)
             };
 
         }
@@ -123,7 +123,8 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
     game_player.prototype.draw = function(){
 
         game.ctx.fillStyle = this.color;
-        game.ctx.fillText(this.game.hp, 200, 300);
+        game.ctx.fillText(this.game.hp.toString(), 200, 300);
+        game.ctx.fillText("Pikachu", 100, 100);
     
     }; //game_player.draw
  

@@ -54,8 +54,8 @@
         var thegame = {
                 id : UUID(),                //generate a new id for the game
                 player_host:player,         //so we know who initiated the game
-                player_client:null,         //nobody else joined yet, since its new
-                player_count:1,              //for simple checking of state
+                player_client : null,       //nobody else joined yet, since its new
+                player_count : 1,           //for simple checking of state
                 hp : 5000
             };
 
@@ -122,6 +122,9 @@
 
         this.log('looking for a game. We have : ' + this.game_count);
 
+        var thegame = this.createGame(player); //one-player mode for now
+        this.startGame(thegame);
+        
         if(this.game_count) {
                 
             var joined_a_game = false;
