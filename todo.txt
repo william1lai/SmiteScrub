@@ -1,0 +1,5 @@
+TODO
+
+- make basic game
+- introduce debug gui mode
+

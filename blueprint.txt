@@ -1,0 +1,12 @@
+server
+- monster
+  - hp
+  - decrease rate
+- time
+
+client
+- player
+  - name
+- time
+
+
