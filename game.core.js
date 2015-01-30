@@ -43,14 +43,14 @@ if('undefined' != typeof(global)) frame_time = 45; //on server we run at 45ms, 2
 
             this.players = {
                 self : new game_player(this,this.instance.player_host),
-                //other : new game_player(this,this.instance.player_client)
+                other : new game_player(this,this.instance.player_client)
             };
 
         } else {
 
             this.players = {
                 self : new game_player(this),
-                //other : new game_player(this)
+                other : new game_player(this)
             };
 
         }
@@ -314,7 +314,7 @@ game_core.prototype.client_process_net_updates = function() {
         var latest_server_data = this.server_updates[ this.server_updates.length-1 ];
 
         var latest_hp = target.hp;
-        this.players.other.game.hp = latest_hp;
+        //this.players.other.game.hp = latest_hp;
         this.players.self.game.hp = latest_hp;
         
     } //if target && previous
@@ -323,8 +323,9 @@ game_core.prototype.client_process_net_updates = function() {
 
 game_core.prototype.client_onserverupdate_received = function(data){
 
-        var player_host = this.players.self.host ?  this.players.self : this.players.other;
-        var player_client = this.players.self.host ?  this.players.other : this.players.self;
+        //var player_host = this.players.self.host ?  this.players.self : this.players.other;
+        //var player_client = this.players.self.host ?  this.players.other : this.players.self;
+        var player_host = this.players.self;
         var this_player = this.players.self;
         
         this.server_time = data.t;
@@ -350,7 +351,7 @@ game_core.prototype.client_update = function() {
         this.client_process_net_updates();
     }
 
-    this.players.other.draw();
+    //this.players.other.draw();
     this.client_update_local_position();
     this.players.self.draw();
 
