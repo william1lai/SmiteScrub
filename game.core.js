@@ -132,6 +132,10 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
                 game.ctx.fillText(this.game.hp.toString(), 320, 240);
             game.ctx.fillText("Score: " + this.score.toString(), 320, 10);
         }
+        else
+        {
+            console.log("server entered draw function");
+        }
     
     }; //game_player.draw
  
@@ -152,9 +156,13 @@ game_core.prototype.update = function(t) {
         this.client_update();
     } else {
         this.instance.hp = this.instance.hp - this.decay;
+        console.log("server hp: " + this.instance.hp);
         this.server_update();
         if (this.instance.hp <= 0)
+        {
+            console.log("Game ended");
             this.server.endGame(this.instance.id);
+        }
     }
 
     this.updateid = window.requestAnimationFrame( this.update.bind(this), this.viewport );
