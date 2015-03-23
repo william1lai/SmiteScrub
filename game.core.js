@@ -164,8 +164,8 @@ game_core.prototype.process_input = function( player ) {
                     player.game.hp = player.game.hp - player.smite_dmg;
                     player.smite_used = true;
                     console.log('smite used');
+                    console.log("hp is now " + player.game.hp);
                 }
-                console.log("hp is now " + player.game.hp);
             } //for all input values
         } //for each input command
     } //if we have inputs
@@ -248,7 +248,7 @@ game_core.prototype.client_handle_input = function(){
         this.socket.send(  server_packet  );
 
     } else {
-        return {hp : this.hp};
+        return;// {hp : this.hp};
     }
 }; //game_core.client_handle_input
 
@@ -351,11 +351,11 @@ game_core.prototype.client_update = function() {
     this.ctx.clearRect(0,0,720,480);
     this.client_handle_input();
 
+    this.process_input(this.players.self);
+
     if( !this.naive_approach ) {
         this.client_process_net_updates();
-    }
-    
-    this.process_input(this.players.self);
+    }    
 
     //this.players.other.draw();
     this.players.self.draw();
