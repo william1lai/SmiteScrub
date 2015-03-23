@@ -38,6 +38,7 @@ if('undefined' != typeof(global)) frame_time = 45; //on server we run at 45ms, 2
             width : 720,
             height : 480
         };
+        this.hp = 5000;
         this.smite_dmg = 1000;
         this.decay = 10;
 
@@ -46,7 +47,6 @@ if('undefined' != typeof(global)) frame_time = 45; //on server we run at 45ms, 2
                 self : new game_player(this,this.instance.player_host),
                 other : new game_player(this,this.instance.player_client)
             };
-            this.hp = game_instance.hp;
         } else {
             this.players = {
                 self : new game_player(this),
@@ -296,6 +296,7 @@ game_core.prototype.client_process_net_prediction_correction = function() {
 
 game_core.prototype.client_process_net_updates = function() {
 
+    console.log("client_process_net_updates");
     if(!this.server_updates.length) return;
 
     var current_time = this.client_time;
