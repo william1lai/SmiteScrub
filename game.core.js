@@ -146,7 +146,6 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
 
 game_core.prototype.update = function(t) {
     
-    console.log("update");
     this.dt = this.lastframetime ? ( (t - this.lastframetime)/1000.0).fixed() : 0.016;
 
     this.lastframetime = t;

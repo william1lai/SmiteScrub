@@ -1,0 +1,101 @@
+2015-03-23T19:01:29.733650+00:00 app[web.1]: server update
+2015-03-23T19:01:29.781937+00:00 app[web.1]: server update
+2015-03-23T19:01:29.822801+00:00 app[web.1]: update
+2015-03-23T19:01:29.822831+00:00 app[web.1]: server hp: 680
+2015-03-23T19:01:29.822858+00:00 app[web.1]: server update
+2015-03-23T19:01:29.869587+00:00 app[web.1]: update
+2015-03-23T19:01:29.869628+00:00 app[web.1]: server hp: 670
+2015-03-23T19:01:29.869655+00:00 app[web.1]: server update
+2015-03-23T19:01:29.917431+00:00 app[web.1]: update
+2015-03-23T19:01:29.917485+00:00 app[web.1]: server hp: 660
+2015-03-23T19:01:29.917488+00:00 app[web.1]: server update
+2015-03-23T19:01:29.961651+00:00 app[web.1]: server update
+2015-03-23T19:01:29.961628+00:00 app[web.1]: server hp: 650
+2015-03-23T19:01:30.049493+00:00 app[web.1]: update
+2015-03-23T19:01:30.003941+00:00 app[web.1]: server hp: 640
+2015-03-23T19:01:30.100708+00:00 app[web.1]: update
+2015-03-23T19:01:30.049560+00:00 app[web.1]: server update
+2015-03-23T19:01:30.005292+00:00 app[web.1]: server update
+2015-03-23T19:01:30.100753+00:00 app[web.1]: server hp: 620
+2015-03-23T19:01:29.961586+00:00 app[web.1]: update
+2015-03-23T19:01:30.049539+00:00 app[web.1]: server hp: 630
+2015-03-23T19:01:30.141480+00:00 app[web.1]: update
+2015-03-23T19:01:30.003911+00:00 app[web.1]: update
+2015-03-23T19:01:30.141546+00:00 app[web.1]: server update
+2015-03-23T19:01:30.141523+00:00 app[web.1]: server hp: 610
+2015-03-23T19:01:30.186021+00:00 app[web.1]: update
+2015-03-23T19:01:30.186062+00:00 app[web.1]: server hp: 600
+2015-03-23T19:01:30.186085+00:00 app[web.1]: server update
+2015-03-23T19:01:30.100775+00:00 app[web.1]: server update
+2015-03-23T19:01:30.230887+00:00 app[web.1]: update
+2015-03-23T19:01:30.230934+00:00 app[web.1]: server hp: 590
+2015-03-23T19:01:30.273539+00:00 app[web.1]: update
+2015-03-23T19:01:30.230957+00:00 app[web.1]: server update
+2015-03-23T19:01:30.334444+00:00 app[web.1]: update
+2015-03-23T19:01:30.334485+00:00 app[web.1]: server hp: 570
+2015-03-23T19:01:30.365524+00:00 app[web.1]: update
+2015-03-23T19:01:30.366094+00:00 app[web.1]: server update
+2015-03-23T19:01:30.273586+00:00 app[web.1]: server hp: 580
+2015-03-23T19:01:30.273616+00:00 app[web.1]: server update
+2015-03-23T19:01:30.334507+00:00 app[web.1]: server update
+2015-03-23T19:01:30.410152+00:00 app[web.1]: server hp: 550
+2015-03-23T19:01:30.410221+00:00 app[web.1]: server update
+2015-03-23T19:01:30.457443+00:00 app[web.1]: update
+2015-03-23T19:01:30.457617+00:00 app[web.1]: server update
+2015-03-23T19:01:30.457548+00:00 app[web.1]: server hp: 540
+2015-03-23T19:01:30.365896+00:00 app[web.1]: server hp: 560
+2015-03-23T19:01:30.409910+00:00 app[web.1]: update
+2015-03-23T19:01:30.499411+00:00 app[web.1]: update
+2015-03-23T19:01:30.499458+00:00 app[web.1]: server hp: 530
+2015-03-23T19:01:30.544229+00:00 app[web.1]: update
+2015-03-23T19:01:30.499481+00:00 app[web.1]: server update
+2015-03-23T19:01:30.544311+00:00 app[web.1]: server update
+2015-03-23T19:01:30.589920+00:00 app[web.1]: server hp: 510
+2015-03-23T19:01:30.590006+00:00 app[web.1]: server update
+2015-03-23T19:01:30.589834+00:00 app[web.1]: update
+2015-03-23T19:01:30.544289+00:00 app[web.1]: server hp: 520
+2015-03-23T19:01:30.634676+00:00 app[web.1]: server update
+2015-03-23T19:01:30.634420+00:00 app[web.1]: server hp: 500
+2015-03-23T19:01:30.723861+00:00 app[web.1]: server update
+2015-03-23T19:01:30.634322+00:00 app[web.1]: update
+2015-03-23T19:01:30.723839+00:00 app[web.1]: update
+2015-03-23T19:01:30.767902+00:00 app[web.1]: update
+2015-03-23T19:01:30.723857+00:00 app[web.1]: server hp: 480
+2015-03-23T19:01:30.768123+00:00 app[web.1]: server hp: 470
+2015-03-23T19:01:30.902705+00:00 app[web.1]: server update
+2015-03-23T19:01:30.679259+00:00 app[web.1]: update
+2015-03-23T19:01:30.768130+00:00 app[web.1]: server update
+2015-03-23T19:01:30.679384+00:00 app[web.1]: server hp: 490
+2015-03-23T19:01:30.679565+00:00 app[web.1]: server update
+2015-03-23T19:01:30.814352+00:00 app[web.1]: server hp: 460
+2015-03-23T19:01:30.814340+00:00 app[web.1]: update
+2015-03-23T19:01:30.902696+00:00 app[web.1]: server hp: 440
+2015-03-23T19:01:30.902591+00:00 app[web.1]: update
+2015-03-23T19:01:30.859901+00:00 app[web.1]: server update
+2015-03-23T19:01:30.859810+00:00 app[web.1]: update
+2015-03-23T19:01:30.859850+00:00 app[web.1]: server hp: 450
+2015-03-23T19:01:30.814384+00:00 app[web.1]: server update
+2015-03-23T19:01:30.949555+00:00 app[web.1]: server hp: 430
+2015-03-23T19:01:30.949619+00:00 app[web.1]: server update
+2015-03-23T19:01:30.993603+00:00 app[web.1]: update
+2015-03-23T19:01:30.993663+00:00 app[web.1]: server update
+2015-03-23T19:01:30.993641+00:00 app[web.1]: server hp: 420
+2015-03-23T19:01:31.038558+00:00 app[web.1]: update
+2015-03-23T19:01:30.949378+00:00 app[web.1]: update
+2015-03-23T19:01:31.038741+00:00 app[web.1]: server update
+2015-03-23T19:01:31.087453+00:00 app[web.1]: update
+2015-03-23T19:01:31.128534+00:00 app[web.1]: server hp: 390
+2015-03-23T19:01:31.128580+00:00 app[web.1]: server update
+2015-03-23T19:01:31.128431+00:00 app[web.1]: update
+2015-03-23T19:01:31.038711+00:00 app[web.1]: server hp: 410
+2015-03-23T19:01:31.087497+00:00 app[web.1]: server hp: 400
+2015-03-23T19:01:31.174036+00:00 app[web.1]: server update
+2015-03-23T19:01:31.173968+00:00 app[web.1]: server hp: 380
+2015-03-23T19:01:31.087519+00:00 app[web.1]: server update
+2015-03-23T19:01:31.173863+00:00 app[web.1]: update
+2015-03-23T19:01:31.218951+00:00 app[web.1]: update
+2015-03-23T19:01:31.262634+00:00 app[web.1]: game removed. there are now 0 games
+2015-03-23T19:01:31.219055+00:00 app[web.1]: server hp: 370
+2015-03-23T19:01:31.219057+00:00 app[web.1]: server update
+2015-03-23T19:01:31.262432+00:00 app[web.1]: 	 socket.io:: client disconnected adcdd04a-a2ab-4e6b-9c82-5a1d48d56792 undefined
+2015-03-23T19:01:31.260231+00:00 heroku[router]: at=info method=GET path="/socket.io/1/websocket/4hPAZAgryJ0-HC5OAlfC" host=frozen-savannah-8528.herokuapp.com request_id=be5b7485-bb46-40a9-a5e6-845be8b8aeeb fwd="97.93.53.175" dyno=web.1 connect=2ms service=30428ms status=101 bytes=35200
