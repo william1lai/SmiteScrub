@@ -76,7 +76,7 @@
 
     }; //game_server.createGame
 
-    game_server.endGame = function(gameid, userid) {
+    game_server.endGame = function(gameid) {
 
         var thegame = this.games[gameid];
         if(thegame) {
