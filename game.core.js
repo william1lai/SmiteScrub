@@ -109,6 +109,7 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
         this.state = 'not-connected';
         this.id = '';
         this.smite_dmg = 1000;
+        this.smite_used = false;
 
         this.state_time = new Date().getTime();
 
@@ -159,8 +160,10 @@ game_core.prototype.process_input = function( player ) {
             for(var i = 0; i < c; ++i) {
                 var key = input[i];
                 console.log(key + " was pressed");
-                if(key == 's') {
+                if(key == 's' && !player.smite_used) {
                     player.game.hp = player.game.hp - player.smite_dmg;
+                    player.smite_used = true;
+                    console.log('smite used');
                 }
                 console.log("hp is now " + player.game.hp);
             } //for all input values
@@ -224,7 +227,6 @@ game_core.prototype.client_handle_input = function(){
 
     if( this.keyboard.pressed('D') ||
         this.keyboard.pressed('F')) {
-            console.log('smite used');
             input.push('s');
         } //smite
 
