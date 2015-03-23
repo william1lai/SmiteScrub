@@ -38,6 +38,7 @@ if('undefined' != typeof(global)) frame_time = 45; //on server we run at 45ms, 2
             width : 720,
             height : 480
         };
+        this.hp = this.instance.hp;
         this.smite_dmg = 1000;
         this.decay = 10;
 
@@ -150,7 +151,7 @@ game_core.prototype.update = function(t) {
         this.client_update();
     } else {
         if (this.hp <= 0)
-            this.server.endGame(this.id);
+            this.server.endGame(this.instance.id);
         this.server_update();
     }
 
