@@ -119,10 +119,9 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
         
     game_player.prototype.draw = function() {
 
-        console.log('trying to draw hp');
+        //console.log('trying to draw hp');
         game.ctx.fillStyle = this.color;
-        game.ctx.fillText(this.game.hp.toString(), 200, 300);
-        game.ctx.fillText("Pikachu", 100, 100);
+        game.ctx.fillText(this.game.hp.toString(), 150, 300);
     
     }; //game_player.draw
  
@@ -137,6 +136,7 @@ game_core.prototype.update = function(t) {
 
     this.lastframetime = t;
 
+    console.log("dt: " + this.dt);
     if(!this.server) {
         this.client_update();
     } else {
