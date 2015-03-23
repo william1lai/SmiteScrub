@@ -245,7 +245,7 @@ game_core.prototype.client_handle_input = function(){
             server_packet += this.input_seq;
 
         this.socket.send(  server_packet  );
-        this.players.self.process_input();
+        this.process_input(this.players.self);
 
     } else {
         return;// {hp : this.hp};
