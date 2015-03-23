@@ -124,7 +124,6 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
 
         if (!this.server)
         {
-            console.log("attempting draw");
             game.ctx.fillStyle = this.color;
             game.ctx.fillText(this.game.hp.toString(), 320, 240);
             game.ctx.fillText(this.score.toString(), 320, 10);
@@ -166,7 +165,7 @@ game_core.prototype.process_input = function( player ) {
             var c = input.length;
             for(var i = 0; i < c; ++i) {
                 var key = input[i];
-                console.log(key + " was pressed");
+                //console.log(key + " was pressed");
                 if(key == 's' && !player.smite_used) {
                     this.hp = this.hp - this.smite_dmg;
                     player.smite_used = true;
@@ -174,7 +173,6 @@ game_core.prototype.process_input = function( player ) {
                     {
                         player.score = this.hp + this.smite_dmg;
                     }
-                    console.log('smite used');
                     console.log("hp is now " + this.hp);
                 }
             } //for all input values
@@ -360,6 +358,7 @@ game_core.prototype.client_onserverupdate_received = function(data){
 
 game_core.prototype.client_update = function() {
 
+    console.log("refresh client");
     this.ctx.clearRect(0,0,720,480);
     this.client_handle_input();
 
