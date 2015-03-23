@@ -1,101 +1,101 @@
-2015-03-23T19:01:29.733650+00:00 app[web.1]: server update
-2015-03-23T19:01:29.781937+00:00 app[web.1]: server update
-2015-03-23T19:01:29.822801+00:00 app[web.1]: update
-2015-03-23T19:01:29.822831+00:00 app[web.1]: server hp: 680
-2015-03-23T19:01:29.822858+00:00 app[web.1]: server update
-2015-03-23T19:01:29.869587+00:00 app[web.1]: update
-2015-03-23T19:01:29.869628+00:00 app[web.1]: server hp: 670
-2015-03-23T19:01:29.869655+00:00 app[web.1]: server update
-2015-03-23T19:01:29.917431+00:00 app[web.1]: update
-2015-03-23T19:01:29.917485+00:00 app[web.1]: server hp: 660
-2015-03-23T19:01:29.917488+00:00 app[web.1]: server update
-2015-03-23T19:01:29.961651+00:00 app[web.1]: server update
-2015-03-23T19:01:29.961628+00:00 app[web.1]: server hp: 650
-2015-03-23T19:01:30.049493+00:00 app[web.1]: update
-2015-03-23T19:01:30.003941+00:00 app[web.1]: server hp: 640
-2015-03-23T19:01:30.100708+00:00 app[web.1]: update
-2015-03-23T19:01:30.049560+00:00 app[web.1]: server update
-2015-03-23T19:01:30.005292+00:00 app[web.1]: server update
-2015-03-23T19:01:30.100753+00:00 app[web.1]: server hp: 620
-2015-03-23T19:01:29.961586+00:00 app[web.1]: update
-2015-03-23T19:01:30.049539+00:00 app[web.1]: server hp: 630
-2015-03-23T19:01:30.141480+00:00 app[web.1]: update
-2015-03-23T19:01:30.003911+00:00 app[web.1]: update
-2015-03-23T19:01:30.141546+00:00 app[web.1]: server update
-2015-03-23T19:01:30.141523+00:00 app[web.1]: server hp: 610
-2015-03-23T19:01:30.186021+00:00 app[web.1]: update
-2015-03-23T19:01:30.186062+00:00 app[web.1]: server hp: 600
-2015-03-23T19:01:30.186085+00:00 app[web.1]: server update
-2015-03-23T19:01:30.100775+00:00 app[web.1]: server update
-2015-03-23T19:01:30.230887+00:00 app[web.1]: update
-2015-03-23T19:01:30.230934+00:00 app[web.1]: server hp: 590
-2015-03-23T19:01:30.273539+00:00 app[web.1]: update
-2015-03-23T19:01:30.230957+00:00 app[web.1]: server update
-2015-03-23T19:01:30.334444+00:00 app[web.1]: update
-2015-03-23T19:01:30.334485+00:00 app[web.1]: server hp: 570
-2015-03-23T19:01:30.365524+00:00 app[web.1]: update
-2015-03-23T19:01:30.366094+00:00 app[web.1]: server update
-2015-03-23T19:01:30.273586+00:00 app[web.1]: server hp: 580
-2015-03-23T19:01:30.273616+00:00 app[web.1]: server update
-2015-03-23T19:01:30.334507+00:00 app[web.1]: server update
-2015-03-23T19:01:30.410152+00:00 app[web.1]: server hp: 550
-2015-03-23T19:01:30.410221+00:00 app[web.1]: server update
-2015-03-23T19:01:30.457443+00:00 app[web.1]: update
-2015-03-23T19:01:30.457617+00:00 app[web.1]: server update
-2015-03-23T19:01:30.457548+00:00 app[web.1]: server hp: 540
-2015-03-23T19:01:30.365896+00:00 app[web.1]: server hp: 560
-2015-03-23T19:01:30.409910+00:00 app[web.1]: update
-2015-03-23T19:01:30.499411+00:00 app[web.1]: update
-2015-03-23T19:01:30.499458+00:00 app[web.1]: server hp: 530
-2015-03-23T19:01:30.544229+00:00 app[web.1]: update
-2015-03-23T19:01:30.499481+00:00 app[web.1]: server update
-2015-03-23T19:01:30.544311+00:00 app[web.1]: server update
-2015-03-23T19:01:30.589920+00:00 app[web.1]: server hp: 510
-2015-03-23T19:01:30.590006+00:00 app[web.1]: server update
-2015-03-23T19:01:30.589834+00:00 app[web.1]: update
-2015-03-23T19:01:30.544289+00:00 app[web.1]: server hp: 520
-2015-03-23T19:01:30.634676+00:00 app[web.1]: server update
-2015-03-23T19:01:30.634420+00:00 app[web.1]: server hp: 500
-2015-03-23T19:01:30.723861+00:00 app[web.1]: server update
-2015-03-23T19:01:30.634322+00:00 app[web.1]: update
-2015-03-23T19:01:30.723839+00:00 app[web.1]: update
-2015-03-23T19:01:30.767902+00:00 app[web.1]: update
-2015-03-23T19:01:30.723857+00:00 app[web.1]: server hp: 480
-2015-03-23T19:01:30.768123+00:00 app[web.1]: server hp: 470
-2015-03-23T19:01:30.902705+00:00 app[web.1]: server update
-2015-03-23T19:01:30.679259+00:00 app[web.1]: update
-2015-03-23T19:01:30.768130+00:00 app[web.1]: server update
-2015-03-23T19:01:30.679384+00:00 app[web.1]: server hp: 490
-2015-03-23T19:01:30.679565+00:00 app[web.1]: server update
-2015-03-23T19:01:30.814352+00:00 app[web.1]: server hp: 460
-2015-03-23T19:01:30.814340+00:00 app[web.1]: update
-2015-03-23T19:01:30.902696+00:00 app[web.1]: server hp: 440
-2015-03-23T19:01:30.902591+00:00 app[web.1]: update
-2015-03-23T19:01:30.859901+00:00 app[web.1]: server update
-2015-03-23T19:01:30.859810+00:00 app[web.1]: update
-2015-03-23T19:01:30.859850+00:00 app[web.1]: server hp: 450
-2015-03-23T19:01:30.814384+00:00 app[web.1]: server update
-2015-03-23T19:01:30.949555+00:00 app[web.1]: server hp: 430
-2015-03-23T19:01:30.949619+00:00 app[web.1]: server update
-2015-03-23T19:01:30.993603+00:00 app[web.1]: update
-2015-03-23T19:01:30.993663+00:00 app[web.1]: server update
-2015-03-23T19:01:30.993641+00:00 app[web.1]: server hp: 420
-2015-03-23T19:01:31.038558+00:00 app[web.1]: update
-2015-03-23T19:01:30.949378+00:00 app[web.1]: update
-2015-03-23T19:01:31.038741+00:00 app[web.1]: server update
-2015-03-23T19:01:31.087453+00:00 app[web.1]: update
-2015-03-23T19:01:31.128534+00:00 app[web.1]: server hp: 390
-2015-03-23T19:01:31.128580+00:00 app[web.1]: server update
-2015-03-23T19:01:31.128431+00:00 app[web.1]: update
-2015-03-23T19:01:31.038711+00:00 app[web.1]: server hp: 410
-2015-03-23T19:01:31.087497+00:00 app[web.1]: server hp: 400
-2015-03-23T19:01:31.174036+00:00 app[web.1]: server update
-2015-03-23T19:01:31.173968+00:00 app[web.1]: server hp: 380
-2015-03-23T19:01:31.087519+00:00 app[web.1]: server update
-2015-03-23T19:01:31.173863+00:00 app[web.1]: update
-2015-03-23T19:01:31.218951+00:00 app[web.1]: update
-2015-03-23T19:01:31.262634+00:00 app[web.1]: game removed. there are now 0 games
-2015-03-23T19:01:31.219055+00:00 app[web.1]: server hp: 370
-2015-03-23T19:01:31.219057+00:00 app[web.1]: server update
-2015-03-23T19:01:31.262432+00:00 app[web.1]: 	 socket.io:: client disconnected adcdd04a-a2ab-4e6b-9c82-5a1d48d56792 undefined
-2015-03-23T19:01:31.260231+00:00 heroku[router]: at=info method=GET path="/socket.io/1/websocket/4hPAZAgryJ0-HC5OAlfC" host=frozen-savannah-8528.herokuapp.com request_id=be5b7485-bb46-40a9-a5e6-845be8b8aeeb fwd="97.93.53.175" dyno=web.1 connect=2ms service=30428ms status=101 bytes=35200
+2015-03-23T19:29:38.770595+00:00 app[web.1]: server update
+2015-03-23T19:29:38.815017+00:00 app[web.1]: server hp: 3500
+2015-03-23T19:29:38.951293+00:00 app[web.1]: server hp: 3470
+2015-03-23T19:29:38.951411+00:00 app[web.1]: server update
+2015-03-23T19:29:38.772252+00:00 app[web.1]: got input
+2015-03-23T19:29:38.906445+00:00 app[web.1]: server update
+2015-03-23T19:29:38.995653+00:00 app[web.1]: server hp: 3460
+2015-03-23T19:29:38.995666+00:00 app[web.1]: server update
+2015-03-23T19:29:38.815143+00:00 app[web.1]: server update
+2015-03-23T19:29:38.860807+00:00 app[web.1]: server hp: 3490
+2015-03-23T19:29:38.860822+00:00 app[web.1]: server update
+2015-03-23T19:29:38.906368+00:00 app[web.1]: server hp: 3480
+2015-03-23T19:29:39.129862+00:00 app[web.1]: server hp: 3430
+2015-03-23T19:29:39.265992+00:00 app[web.1]: server hp: 3400
+2015-03-23T19:29:39.085433+00:00 app[web.1]: server hp: 3440
+2015-03-23T19:29:39.040903+00:00 app[web.1]: server hp: 3450
+2015-03-23T19:29:39.175703+00:00 app[web.1]: server update
+2015-03-23T19:29:39.040992+00:00 app[web.1]: server update
+2015-03-23T19:29:39.220478+00:00 app[web.1]: server update
+2015-03-23T19:29:39.266087+00:00 app[web.1]: server update
+2015-03-23T19:29:39.175605+00:00 app[web.1]: server hp: 3420
+2015-03-23T19:29:39.220463+00:00 app[web.1]: server hp: 3410
+2015-03-23T19:29:39.129955+00:00 app[web.1]: server update
+2015-03-23T19:29:39.086561+00:00 app[web.1]: server update
+2015-03-23T19:29:39.310579+00:00 app[web.1]: server hp: 3390
+2015-03-23T19:29:39.310683+00:00 app[web.1]: server update
+2015-03-23T19:29:39.356682+00:00 app[web.1]: server hp: 3380
+2015-03-23T19:29:39.444956+00:00 app[web.1]: server hp: 3360
+2015-03-23T19:29:39.581282+00:00 app[web.1]: server hp: 3330
+2015-03-23T19:29:39.535377+00:00 app[web.1]: server hp: 3340
+2015-03-23T19:29:39.400584+00:00 app[web.1]: server update
+2015-03-23T19:29:39.581294+00:00 app[web.1]: server update
+2015-03-23T19:29:39.445052+00:00 app[web.1]: server update
+2015-03-23T19:29:39.356696+00:00 app[web.1]: server update
+2015-03-23T19:29:39.490919+00:00 app[web.1]: server update
+2015-03-23T19:29:39.490824+00:00 app[web.1]: server hp: 3350
+2015-03-23T19:29:39.400488+00:00 app[web.1]: server hp: 3370
+2015-03-23T19:29:39.535390+00:00 app[web.1]: server update
+2015-03-23T19:29:39.625526+00:00 app[web.1]: server hp: 3320
+2015-03-23T19:29:39.625622+00:00 app[web.1]: server update
+2015-03-23T19:29:39.669885+00:00 app[web.1]: server update
+2015-03-23T19:29:39.669870+00:00 app[web.1]: server hp: 3310
+2015-03-23T19:29:39.715781+00:00 app[web.1]: server hp: 3300
+2015-03-23T19:29:39.759412+00:00 app[web.1]: server hp: 3290
+2015-03-23T19:29:39.715796+00:00 app[web.1]: server update
+2015-03-23T19:29:39.759516+00:00 app[web.1]: server update
+2015-03-23T19:29:39.806018+00:00 app[web.1]: server hp: 3280
+2015-03-23T19:29:39.851448+00:00 app[web.1]: server update
+2015-03-23T19:29:39.851353+00:00 app[web.1]: server hp: 3270
+2015-03-23T19:29:39.806113+00:00 app[web.1]: server update
+2015-03-23T19:29:39.940678+00:00 app[web.1]: server update
+2015-03-23T19:29:39.895689+00:00 app[web.1]: server update
+2015-03-23T19:29:40.032983+00:00 app[web.1]: server update
+2015-03-23T19:29:39.940666+00:00 app[web.1]: server hp: 3250
+2015-03-23T19:29:39.989638+00:00 app[web.1]: server update
+2015-03-23T19:29:40.076423+00:00 app[web.1]: server hp: 3220
+2015-03-23T19:29:39.895651+00:00 app[web.1]: server hp: 3260
+2015-03-23T19:29:39.989537+00:00 app[web.1]: server hp: 3240
+2015-03-23T19:29:40.120559+00:00 app[web.1]: server update
+2015-03-23T19:29:40.032969+00:00 app[web.1]: server hp: 3230
+2015-03-23T19:29:40.120545+00:00 app[web.1]: server hp: 3210
+2015-03-23T19:29:40.210865+00:00 app[web.1]: server update
+2015-03-23T19:29:40.169392+00:00 app[web.1]: server hp: 3200
+2015-03-23T19:29:40.256104+00:00 app[web.1]: server hp: 3180
+2015-03-23T19:29:40.076782+00:00 app[web.1]: server update
+2015-03-23T19:29:40.302341+00:00 app[web.1]: server hp: 3170
+2015-03-23T19:29:40.302439+00:00 app[web.1]: server update
+2015-03-23T19:29:40.210851+00:00 app[web.1]: server hp: 3190
+2015-03-23T19:29:40.170102+00:00 app[web.1]: server update
+2015-03-23T19:29:40.256312+00:00 app[web.1]: server update
+2015-03-23T19:29:40.345568+00:00 app[web.1]: server hp: 3160
+2015-03-23T19:29:40.392234+00:00 app[web.1]: server hp: 3150
+2015-03-23T19:29:40.345663+00:00 app[web.1]: server update
+2015-03-23T19:29:40.393241+00:00 app[web.1]: server update
+2015-03-23T19:29:40.440444+00:00 app[web.1]: server hp: 3140
+2015-03-23T19:29:40.480514+00:00 app[web.1]: server update
+2015-03-23T19:29:40.571193+00:00 app[web.1]: server hp: 3110
+2015-03-23T19:29:40.571207+00:00 app[web.1]: server update
+2015-03-23T19:29:40.440557+00:00 app[web.1]: server update
+2015-03-23T19:29:40.480395+00:00 app[web.1]: server hp: 3130
+2015-03-23T19:29:40.525890+00:00 app[web.1]: server update
+2015-03-23T19:29:40.616492+00:00 app[web.1]: server update
+2015-03-23T19:29:40.616477+00:00 app[web.1]: server hp: 3100
+2015-03-23T19:29:40.525879+00:00 app[web.1]: server hp: 3120
+2015-03-23T19:29:40.661090+00:00 app[web.1]: server hp: 3090
+2015-03-23T19:29:40.661142+00:00 app[web.1]: server update
+2015-03-23T19:29:40.707043+00:00 app[web.1]: server hp: 3080
+2015-03-23T19:29:40.841922+00:00 app[web.1]: server hp: 3050
+2015-03-23T19:29:40.841935+00:00 app[web.1]: server update
+2015-03-23T19:29:40.886374+00:00 app[web.1]: server hp: 3040
+2015-03-23T19:29:40.886388+00:00 app[web.1]: server update
+2015-03-23T19:29:40.707055+00:00 app[web.1]: server update
+2015-03-23T19:29:40.750587+00:00 app[web.1]: server hp: 3070
+2015-03-23T19:29:40.795984+00:00 app[web.1]: server hp: 3060
+2015-03-23T19:29:40.795994+00:00 app[web.1]: server update
+2015-03-23T19:29:40.930744+00:00 app[web.1]: server hp: 3030
+2015-03-23T19:29:40.930760+00:00 app[web.1]: server update
+2015-03-23T19:29:40.751306+00:00 app[web.1]: server update
+2015-03-23T19:29:40.969303+00:00 app[web.1]: 	 socket.io:: client disconnected a20e425c-1507-40cc-8b97-2a501db7a01b undefined
+2015-03-23T19:29:40.971819+00:00 heroku[router]: at=info method=GET path="/socket.io/1/websocket/_vfYX5_8_RcgtFQ5HHmM" host=frozen-savannah-8528.herokuapp.com request_id=83df0592-7582-4ff5-823a-66ee95f290ec fwd="97.93.53.175" dyno=web.1 connect=1ms service=8843ms status=101 bytes=14955
+2015-03-23T19:29:40.969560+00:00 app[web.1]: game removed. there are now 0 games

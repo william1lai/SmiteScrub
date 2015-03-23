@@ -207,7 +207,6 @@ game_core.prototype.process_input = function( player ) {
 
 game_core.prototype.server_update = function(){
 
-    console.log("server update");
     this.server_time = this.local_time;
 
     this.laststate = {
