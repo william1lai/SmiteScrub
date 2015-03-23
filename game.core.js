@@ -130,8 +130,8 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
             if (this.game.hp <= 0)
                 game.ctx.fillText("0", 320, 240);
             else
-                game.ctx.fillText(this.game.hp.toString(), 320, 240);
-            game.ctx.fillText("Score: " + this.score.toString(), 320, 10);
+                game.ctx.fillText(this.game.hp.toString(), 320, 255);
+            game.ctx.fillText("Score: " + this.score.toString(), 300, 30);
         }
         else
         {
