@@ -160,9 +160,9 @@ game_core.prototype.process_input = function( player ) {
                 var key = input[i];
                 console.log(key + " was pressed");
                 if(key == 's') {
-                    this.game.hp = this.game.hp - this.smite_dmg;
+                    player.game.hp = player.game.hp - player.smite_dmg;
                 }
-                console.log("hp is now " + this.game.hp);
+                console.log("hp is now " + player.game.hp);
             } //for all input values
         } //for each input command
     } //if we have inputs
