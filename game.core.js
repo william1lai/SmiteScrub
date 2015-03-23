@@ -40,7 +40,7 @@ if('undefined' != typeof(global)) frame_time = 45; //on server we run at 45ms, 2
         };
         this.hp = 5000;
         this.smite_dmg = 1000;
-        this.decay = 5;
+        this.decay = 10;
 
         if(this.server) {
             this.players = {
@@ -125,8 +125,11 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
         if (!this.server)
         {
             game.ctx.fillStyle = this.color;
-            game.ctx.fillText(this.game.hp.toString(), 320, 240);
-            game.ctx.fillText(this.score.toString(), 320, 10);
+            if (this.game.hp <= 0)
+                game.ctx.fillText("0", 320, 240);
+            else
+                game.ctx.fillText(this.game.hp.toString(), 320, 240);
+            game.ctx.fillText("Score: " + this.score.toString(), 320, 10);
         }
     
     }; //game_player.draw
