@@ -58,7 +58,8 @@ if('undefined' != typeof(global)) frame_time = 45; //on server we run at 45ms, 2
         this.create_timer();
 
         if(!this.server) {
-            
+
+            this.decay = 5;
             this.keyboard = new THREEx.KeyboardState();
             this.client_create_configuration();
             this.server_updates = [];
@@ -120,6 +121,7 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
         
     game_player.prototype.draw = function() {
 
+        console.log("attempting draw");
         game.ctx.fillStyle = this.color;
         game.ctx.fillText(this.game.hp.toString(), 320, 240);
     
@@ -135,6 +137,7 @@ game_core.prototype.update = function(t) {
     this.dt = this.lastframetime ? ( (t - this.lastframetime)/1000.0).fixed() : 0.016;
 
     this.lastframetime = t;
+    this.players.self.game.hp = this.players.self.game.hp - this.decay;
 
     if(!this.server) {
         this.client_update();
