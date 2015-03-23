@@ -147,6 +147,7 @@ game_core.prototype.update = function(t) {
     this.lastframetime = t;
 
     if(!this.server) {
+        this.hp = this.hp - this.decay;
         this.client_update();
     } else {
         this.instance.hp = this.instance.hp - this.decay;
@@ -261,6 +262,7 @@ game_core.prototype.client_handle_input = function(){
             server_packet += this.local_time.toFixed(3).replace('.','-') + '.';
             server_packet += this.input_seq;
 
+        console.log("server packet: " + server_packet);
         this.socket.send(  server_packet  );
         this.process_input(this.players.self);
 
@@ -296,7 +298,6 @@ game_core.prototype.client_process_net_prediction_correction = function() {
 
 game_core.prototype.client_process_net_updates = function() {
 
-    console.log("client_process_net_updates");
     if(!this.server_updates.length) return;
 
     var current_time = this.client_time;
@@ -335,9 +336,9 @@ game_core.prototype.client_process_net_updates = function() {
 
         var latest_server_data = this.server_updates[ this.server_updates.length-1 ];
 
-        var latest_hp = target.hp;
+        //var latest_hp = target.hp;
         //this.players.other.game.hp = latest_hp;
-        this.players.self.game.hp = latest_hp;
+        //this.players.self.game.hp = latest_hp;
         
     } //if target && previous
 
