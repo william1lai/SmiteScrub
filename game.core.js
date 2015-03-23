@@ -352,7 +352,6 @@ game_core.prototype.client_update = function() {
     }
 
     //this.players.other.draw();
-    this.client_update_local_position();
     this.players.self.draw();
 
     this.client_refresh_fps();
