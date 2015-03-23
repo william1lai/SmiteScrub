@@ -111,6 +111,7 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
         this.id = '';
         this.smite_dmg = 1000;
         this.smite_used = false;
+        this.score = 0;
 
         this.state_time = new Date().getTime();
 
@@ -122,8 +123,9 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
     game_player.prototype.draw = function() {
 
         console.log("attempting draw");
-        game.ctx.fillStyle = this.color;
+        //game.ctx.fillStyle = this.color;
         game.ctx.fillText(this.game.hp.toString(), 320, 240);
+        game.ctx.fillText(this.score.toString(), 320, 10);
     
     }; //game_player.draw
  
@@ -165,6 +167,10 @@ game_core.prototype.process_input = function( player ) {
                 if(key == 's' && !player.smite_used) {
                     player.game.hp = player.game.hp - player.smite_dmg;
                     player.smite_used = true;
+                    if (player.game.hp <= 0)
+                    {
+                        player.score = player.game.hp + player.smite_dmg;
+                    }
                     console.log('smite used');
                     console.log("hp is now " + player.game.hp);
                 }
