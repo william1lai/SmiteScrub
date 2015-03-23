@@ -1,0 +1,101 @@
+2015-01-30T21:07:40.737404+00:00 app[web.1]:     at SocketNamespace.<anonymous> (/app/app.js:54:21)
+2015-01-30T21:07:40.750316+00:00 heroku[router]: at=info method=GET path="/socket.io/1/websocket/vgBOY1xVPGLQmHv8q54m" host=frozen-savannah-8528.herokuapp.com request_id=7ff01677-c66c-4446-a2f7-ca9e4a914e17 fwd="169.232.212.162" dyno=web.1 connect=1ms service=51ms status=101 bytes=129
+2015-01-30T21:07:41.485575+00:00 heroku[web.1]: Process exited with status 8
+2015-01-30T21:07:41.510682+00:00 heroku[web.1]: State changed from up to crashed
+2015-01-30T21:07:35.509491+00:00 heroku[web.1]: State changed from starting to up
+2015-01-30T21:07:46.578883+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/socket.io/1/?t=1422652067699" host=frozen-savannah-8528.herokuapp.com request_id=35fa5d93-f8b7-4b9f-bedc-da7b7ef2cc40 fwd="169.232.212.162" dyno=web.1 connect=5000ms service= status=503 bytes=
+2015-01-30T21:07:46.653984+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/socket.io/1/?t=1422652067699" host=frozen-savannah-8528.herokuapp.com request_id=a2ae9a45-ce31-40e2-bb7c-0e0e94957d0c fwd="169.232.212.162" dyno= connect= service= status=503 bytes=
+2015-01-30T21:07:47.584706+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/socket.io/1/?t=1422652073700" host=frozen-savannah-8528.herokuapp.com request_id=05b2fe7d-2bdb-42cc-8d4e-0697f42493f9 fwd="169.232.212.162" dyno= connect= service= status=503 bytes=
+2015-01-30T21:07:49.583110+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/socket.io/1/?t=1422652075700" host=frozen-savannah-8528.herokuapp.com request_id=08672fc6-2bf7-4d95-9a5b-170fe3e6a16b fwd="169.232.212.162" dyno= connect= service= status=503 bytes=
+2015-01-30T21:07:54.598366+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/socket.io/1/?t=1422652080709" host=frozen-savannah-8528.herokuapp.com request_id=d4ad7185-1466-4e20-b92b-6f2a8c906717 fwd="169.232.212.162" dyno= connect= service= status=503 bytes=
+2015-01-30T21:08:03.755363+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/socket.io/1/?t=1422652089705" host=frozen-savannah-8528.herokuapp.com request_id=0d471dd1-f91e-4ffd-a98a-7da2b64d1a6e fwd="169.232.212.162" dyno= connect= service= status=503 bytes=
+2015-01-30T21:08:20.826121+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/socket.io/1/?t=1422652106701" host=frozen-savannah-8528.herokuapp.com request_id=6c04f436-ba8f-485b-ae36-08f4aaffe7a7 fwd="169.232.212.162" dyno= connect= service= status=503 bytes=
+2015-01-30T21:08:52.907355+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/socket.io/1/?t=1422652138703" host=frozen-savannah-8528.herokuapp.com request_id=36d90dc8-6ac0-4969-abe5-418427ef4f92 fwd="169.232.212.162" dyno= connect= service= status=503 bytes=
+2015-01-30T21:09:57.855843+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/socket.io/1/?t=1422652203702" host=frozen-savannah-8528.herokuapp.com request_id=04bade98-a31d-468d-a333-15bf539a9c5e fwd="169.232.212.162" dyno= connect= service= status=503 bytes=
+2015-01-30T21:12:05.932903+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/socket.io/1/?t=1422652331703" host=frozen-savannah-8528.herokuapp.com request_id=d59718c3-cc92-423e-8e58-1a080e1271d0 fwd="169.232.212.162" dyno= connect= service= status=503 bytes=
+2015-01-30T21:13:44.743309+00:00 heroku[web.1]: State changed from crashed to starting
+2015-01-30T21:13:44.604952+00:00 heroku[api]: Deploy 3abd3f7 by williamlai@ucla.edu
+2015-01-30T21:13:44.604952+00:00 heroku[api]: Release v14 created by williamlai@ucla.edu
+2015-01-30T21:13:47.004503+00:00 heroku[web.1]: Starting process with command `node app.js`
+2015-01-30T21:13:48.935779+00:00 app[web.1]: 	 :: Express :: Listening on port 36757
+2015-01-30T21:13:48.938927+00:00 app[web.1]: info: socket.io started
+2015-01-30T21:13:50.659220+00:00 heroku[web.1]: State changed from starting to up
+2015-01-30T21:16:12.599605+00:00 heroku[router]: at=info method=GET path="/" host=frozen-savannah-8528.herokuapp.com request_id=217729b7-bf80-45c6-80cb-acfd03c62be3 fwd="169.232.212.162" dyno=web.1 connect=4ms service=14ms status=200 bytes=1120
+2015-01-30T21:16:12.715482+00:00 heroku[router]: at=info method=GET path="/index.css" host=frozen-savannah-8528.herokuapp.com request_id=b007160f-6548-490c-8bcf-f8abe7ccc3e2 fwd="169.232.212.162" dyno=web.1 connect=1ms service=4ms status=200 bytes=549
+2015-01-30T21:16:12.588914+00:00 app[web.1]: trying to load /app/index.html
+2015-01-30T21:16:13.584152+00:00 heroku[router]: at=info method=GET path="/lib/keyboard.js" host=frozen-savannah-8528.herokuapp.com request_id=5ce20b28-6687-41b7-bec0-dd430caa8b0a fwd="169.232.212.162" dyno=web.1 connect=1ms service=707ms status=200 bytes=3461
+2015-01-30T21:16:13.595885+00:00 heroku[router]: at=info method=GET path="/client.js" host=frozen-savannah-8528.herokuapp.com request_id=ab1ff65c-041c-4717-9165-0cc0b08d2add fwd="169.232.212.162" dyno=web.1 connect=1ms service=698ms status=200 bytes=642
+2015-01-30T21:16:13.591100+00:00 heroku[router]: at=info method=GET path="/socket.io/socket.io.js" host=frozen-savannah-8528.herokuapp.com request_id=00e4551e-9e32-487e-a0a0-718ee4f4fd60 fwd="169.232.212.162" dyno=web.1 connect=1ms service=797ms status=200 bytes=74883
+2015-01-30T21:16:13.605219+00:00 heroku[router]: at=info method=GET path="/lib/dat.gui.min.js" host=frozen-savannah-8528.herokuapp.com request_id=8e11aafd-0302-459b-a7a9-291c3b9ef76c fwd="169.232.212.162" dyno=web.1 connect=1ms service=725ms status=200 bytes=45701
+2015-01-30T21:16:13.647447+00:00 heroku[router]: at=info method=GET path="/game.core.js" host=frozen-savannah-8528.herokuapp.com request_id=7df083e6-efc0-43a4-b768-51a7e90d20f6 fwd="169.232.212.162" dyno=web.1 connect=1ms service=742ms status=200 bytes=14148
+2015-01-30T21:16:13.995795+00:00 heroku[router]: at=info method=GET path="/socket.io/1/?t=1422652580100" host=frozen-savannah-8528.herokuapp.com request_id=04e7aabf-64c9-4ac3-83a0-208058350fe8 fwd="169.232.212.162" dyno=web.1 connect=0ms service=4ms status=200 bytes=211
+2015-01-30T21:16:14.235271+00:00 app[web.1]: looking for a game. We have : 0
+2015-01-30T21:16:14.236669+00:00 app[web.1]: server host at  0.016
+2015-01-30T21:16:14.236813+00:00 app[web.1]: starting game
+2015-01-30T21:16:14.237074+00:00 app[web.1]: starting game
+2015-01-30T21:16:14.237213+00:00 app[web.1]: 	 socket.io:: player f5dad223-b707-4cd9-a694-88a2ae8863d8 connected
+2015-01-30T21:16:14.236724+00:00 app[web.1]: player f5dad223-b707-4cd9-a694-88a2ae8863d8 created a game with id 24693ea1-4707-48f9-818a-506179e80a75
+2015-01-30T21:21:50.105757+00:00 heroku[api]: Deploy 6037072 by williamlai@ucla.edu
+2015-01-30T21:21:50.105757+00:00 heroku[api]: Release v15 created by williamlai@ucla.edu
+2015-01-30T21:21:50.526724+00:00 heroku[web.1]: State changed from up to starting
+2015-01-30T21:21:52.890999+00:00 heroku[web.1]: Starting process with command `node app.js`
+2015-01-30T21:21:53.488052+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-01-30T21:21:54.269468+00:00 heroku[router]: at=info method=GET path="/socket.io/1/websocket/gW5Ly-rw4gAwxBzAsVKL" host=frozen-savannah-8528.herokuapp.com request_id=0e34b948-1fbd-431b-9137-9546c52b35c6 fwd="169.232.212.162" dyno=web.1 connect=0ms service=340041ms status=101 bytes=129
+2015-01-30T21:21:55.055624+00:00 heroku[web.1]: Process exited with status 143
+2015-01-30T21:21:55.065256+00:00 app[web.1]: info: socket.io started
+2015-01-30T21:22:04.307516+00:00 heroku[web.1]: State changed from starting to up
+2015-01-30T21:22:05.330534+00:00 heroku[router]: at=info method=GET path="/socket.io/1/?t=1422652921716" host=frozen-savannah-8528.herokuapp.com request_id=dcc21a84-0d8c-46c0-914f-fb00e2b3c4a8 fwd="169.232.212.162" dyno=web.1 connect=2ms service=12ms status=200 bytes=211
+2015-01-30T21:22:05.591026+00:00 app[web.1]: server host at  0.016
+2015-01-30T21:22:05.591162+00:00 app[web.1]: player f97c3030-10b9-42f1-ad7e-932489f61934 created a game with id 0f2a7329-ed7d-4434-974b-a167dbc5056b
+2015-01-30T21:22:05.591215+00:00 app[web.1]: starting game
+2015-01-30T21:22:05.591514+00:00 app[web.1]: starting game
+2015-01-30T21:22:05.591744+00:00 app[web.1]: 	 socket.io:: player f97c3030-10b9-42f1-ad7e-932489f61934 connected
+2015-01-30T21:22:09.836780+00:00 heroku[router]: at=info method=GET path="/" host=frozen-savannah-8528.herokuapp.com request_id=886eccd6-47bb-4ccf-b7b0-aeb36f3402b0 fwd="169.232.212.162" dyno=web.1 connect=1ms service=18ms status=200 bytes=1120
+2015-01-30T21:22:09.952010+00:00 heroku[router]: at=info method=GET path="/socket.io/1/websocket/jTWINRp8aXFy1X3xuL14" host=frozen-savannah-8528.herokuapp.com request_id=e0cf8e54-9943-4888-a750-f4927326d450 fwd="169.232.212.162" dyno=web.1 connect=2ms service=4367ms status=101 bytes=129
+2015-01-30T21:22:09.957820+00:00 heroku[router]: at=info method=GET path="/index.css" host=frozen-savannah-8528.herokuapp.com request_id=ecb5206b-94ce-459e-a522-451758b75f0d fwd="169.232.212.162" dyno=web.1 connect=1ms service=5ms status=200 bytes=549
+2015-01-30T21:22:09.936247+00:00 app[web.1]: server host at  0.016
+2015-01-30T21:22:09.940455+00:00 app[web.1]: starting game
+2015-01-30T21:22:09.940670+00:00 app[web.1]: starting game
+2015-01-30T21:22:09.940773+00:00 app[web.1]: game removed. there are now 1 games
+2015-01-30T21:22:09.936588+00:00 app[web.1]: player f97c3030-10b9-42f1-ad7e-932489f61934 created a game with id 0112ea2f-a97d-40af-8fd0-ccdf9e80f235
+2015-01-30T21:22:09.932652+00:00 app[web.1]: 	 socket.io:: client disconnected f97c3030-10b9-42f1-ad7e-932489f61934 undefined
+2015-01-30T21:22:11.416153+00:00 heroku[router]: at=info method=GET path="/lib/dat.gui.min.js" host=frozen-savannah-8528.herokuapp.com request_id=1df62105-2ad7-4fdc-8005-3b9046732c0d fwd="169.232.212.162" dyno=web.1 connect=1ms service=1288ms status=200 bytes=45701
+2015-01-30T21:22:11.384804+00:00 heroku[router]: at=info method=GET path="/socket.io/socket.io.js" host=frozen-savannah-8528.herokuapp.com request_id=f2ce5e48-2105-40e0-ac26-53ca971c93ed fwd="169.232.212.162" dyno=web.1 connect=1ms service=1347ms status=200 bytes=74883
+2015-01-30T21:22:11.415724+00:00 heroku[router]: at=info method=GET path="/client.js" host=frozen-savannah-8528.herokuapp.com request_id=75aaf810-231d-4065-868a-c59378a61f0c fwd="169.232.212.162" dyno=web.1 connect=2ms service=1288ms status=200 bytes=642
+2015-01-30T21:22:11.412430+00:00 heroku[router]: at=info method=GET path="/game.core.js" host=frozen-savannah-8528.herokuapp.com request_id=1af56bc4-1d55-41f1-8981-0d17c87f1492 fwd="169.232.212.162" dyno=web.1 connect=2ms service=1287ms status=200 bytes=14222
+2015-01-30T21:22:11.420472+00:00 heroku[router]: at=info method=GET path="/lib/keyboard.js" host=frozen-savannah-8528.herokuapp.com request_id=f3063179-0f9c-4d9c-a387-7374b0e944c6 fwd="169.232.212.162" dyno=web.1 connect=1ms service=1291ms status=200 bytes=3461
+2015-01-30T21:22:11.946620+00:00 heroku[router]: at=info method=GET path="/socket.io/1/?t=1422652938013" host=frozen-savannah-8528.herokuapp.com request_id=9f76ae64-d041-4107-b7d8-4a67415b276f fwd="169.232.212.162" dyno=web.1 connect=7ms service=14ms status=200 bytes=211
+2015-01-30T21:22:12.180221+00:00 app[web.1]: server host at  0.016
+2015-01-30T21:22:12.180634+00:00 app[web.1]: 	 socket.io:: player 99d540e2-b6a0-4a07-a068-6472d644c82d connected
+2015-01-30T21:22:12.180272+00:00 app[web.1]: player 99d540e2-b6a0-4a07-a068-6472d644c82d created a game with id 3781e3af-544d-4eb6-a8da-d4f622843634
+2015-01-30T21:22:12.180277+00:00 app[web.1]: starting game
+2015-01-30T21:22:12.180416+00:00 app[web.1]: starting game
+2015-01-30T21:27:35.162666+00:00 heroku[api]: Deploy c274add by williamlai@ucla.edu
+2015-01-30T21:27:35.162666+00:00 heroku[api]: Release v16 created by williamlai@ucla.edu
+2015-01-30T21:27:37.859983+00:00 heroku[web.1]: Starting process with command `node app.js`
+2015-01-30T21:27:39.835027+00:00 app[web.1]: info: socket.io started
+2015-01-30T21:27:35.459854+00:00 heroku[web.1]: State changed from up to starting
+2015-01-30T21:27:40.508232+00:00 heroku[web.1]: State changed from starting to up
+2015-01-30T21:29:16.598312+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-01-30T21:29:17.621523+00:00 heroku[router]: at=info method=GET path="/socket.io/1/websocket/SGJlnji9Ep7yMD9NuL15" host=frozen-savannah-8528.herokuapp.com request_id=688c08f6-003f-4e5b-a11e-5ce21a34e98a fwd="169.232.212.162" dyno=web.1 connect=1ms service=425446ms status=101 bytes=129
+2015-01-30T21:29:18.772553+00:00 heroku[web.1]: Process exited with status 143
+2015-01-30T21:29:18.972058+00:00 heroku[router]: at=info method=GET path="/socket.io/1/?t=1422653364723" host=frozen-savannah-8528.herokuapp.com request_id=416699a3-6569-40f4-acc9-e5b5f1844812 fwd="169.232.212.162" dyno=web.1 connect=0ms service=34ms status=200 bytes=211
+2015-01-30T21:29:19.317456+00:00 app[web.1]: server host at  0.016
+2015-01-30T21:29:19.317548+00:00 app[web.1]: player cc1c5bce-8107-4530-baea-6dcf05c0fafa created a game with id 047ddfb1-2add-4d5f-91e6-d41a9d2e5bce
+2015-01-30T21:29:19.317674+00:00 app[web.1]: starting game
+2015-01-30T21:29:19.320157+00:00 app[web.1]: 	 socket.io:: player cc1c5bce-8107-4530-baea-6dcf05c0fafa connected
+2015-01-30T21:30:03.009137+00:00 heroku[router]: at=info method=GET path="/" host=frozen-savannah-8528.herokuapp.com request_id=e002ac9a-1f27-4404-9916-af49e644444d fwd="169.232.212.162" dyno=web.1 connect=1ms service=27ms status=200 bytes=1120
+2015-01-30T21:30:03.110840+00:00 heroku[router]: at=info method=GET path="/socket.io/1/websocket/G5OTu_gB-1lZ2YsjvgA5" host=frozen-savannah-8528.herokuapp.com request_id=abc1785c-b16c-4e9c-987f-17c0f1021371 fwd="169.232.212.162" dyno=web.1 connect=3ms service=43822ms status=101 bytes=129
+2015-01-30T21:30:03.112676+00:00 app[web.1]: 	 socket.io:: client disconnected cc1c5bce-8107-4530-baea-6dcf05c0fafa undefined
+2015-01-30T21:30:03.115223+00:00 app[web.1]: game removed. there are now 0 games
+2015-01-30T21:30:03.136185+00:00 heroku[router]: at=info method=GET path="/index.css" host=frozen-savannah-8528.herokuapp.com request_id=51d3761c-4977-45b2-89e1-75f44d71e6ce fwd="169.232.212.162" dyno=web.1 connect=1ms service=5ms status=200 bytes=549
+2015-01-30T21:30:04.975113+00:00 heroku[router]: at=info method=GET path="/game.core.js" host=frozen-savannah-8528.herokuapp.com request_id=8cc6b973-f3d6-4467-a703-ff15db528255 fwd="169.232.212.162" dyno=web.1 connect=0ms service=1548ms status=200 bytes=14222
+2015-01-30T21:30:04.972723+00:00 heroku[router]: at=info method=GET path="/lib/keyboard.js" host=frozen-savannah-8528.herokuapp.com request_id=5ff148ef-5664-4f89-8e2e-3c5b48b0321e fwd="169.232.212.162" dyno=web.1 connect=1ms service=1554ms status=200 bytes=3461
+2015-01-30T21:30:04.954735+00:00 heroku[router]: at=info method=GET path="/socket.io/socket.io.js" host=frozen-savannah-8528.herokuapp.com request_id=bc2680e3-21b4-4ee9-904c-2cc4b3cb02f1 fwd="169.232.212.162" dyno=web.1 connect=1ms service=1740ms status=200 bytes=74883
+2015-01-30T21:30:04.961531+00:00 heroku[router]: at=info method=GET path="/lib/dat.gui.min.js" host=frozen-savannah-8528.herokuapp.com request_id=a2d2c382-fb32-4a50-a3c0-0f2fbcf0f703 fwd="169.232.212.162" dyno=web.1 connect=0ms service=1581ms status=200 bytes=45701
+2015-01-30T21:30:04.975239+00:00 heroku[router]: at=info method=GET path="/client.js" host=frozen-savannah-8528.herokuapp.com request_id=41cd84c2-0753-4b33-83d8-fd79e11423d9 fwd="169.232.212.162" dyno=web.1 connect=1ms service=1533ms status=200 bytes=642
+2015-01-30T21:30:05.698052+00:00 heroku[router]: at=info method=GET path="/socket.io/1/?t=1422653411797" host=frozen-savannah-8528.herokuapp.com request_id=8d7d9293-b098-47da-b487-4a4d9dcf4174 fwd="169.232.212.162" dyno=web.1 connect=6ms service=3ms status=200 bytes=211
+2015-01-30T21:30:06.046316+00:00 app[web.1]: starting game
+2015-01-30T21:30:06.046563+00:00 app[web.1]: 	 socket.io:: player ad15981f-0dae-4b43-855f-bb120c7bc234 connected
+2015-01-30T21:30:06.046235+00:00 app[web.1]: player ad15981f-0dae-4b43-855f-bb120c7bc234 created a game with id 69d22b82-26c1-4dec-a9b7-4687d781f322
+2015-01-30T21:30:06.045797+00:00 app[web.1]: server host at  0.016

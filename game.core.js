@@ -424,7 +424,7 @@ game_core.prototype.client_connect_to_server = function() {
         }.bind(this));
 
         this.socket.on('disconnect', this.client_ondisconnect.bind(this));
-        this.socket.on('onserverupdate', this.client_onserverupdate_recieved.bind(this));
+        this.socket.on('onserverupdate', this.client_onserverupdate_received.bind(this));
         this.socket.on('onconnected', this.client_onconnected.bind(this));
         this.socket.on('error', this.client_ondisconnect.bind(this));
         this.socket.on('message', this.client_onnetmessage.bind(this));

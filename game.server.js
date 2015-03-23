@@ -90,8 +90,7 @@
                     if(thegame.player_client) {
                         thegame.player_client.send('s.e');
                         this.findGame(thegame.player_client);
-                    }
-                    
+                    }          
                 } else {
             */        if(thegame.player_host) {
                         thegame.player_host.send('s.e');
@@ -123,7 +122,6 @@
     game_server.findGame = function(player) {
 
         //this.log('looking for a game. We have : ' + this.game_count);
-
         var thegame = this.createGame(player); //one-player mode for now
         this.startGame(thegame);
         return;
