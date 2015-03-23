@@ -119,9 +119,8 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
         
     game_player.prototype.draw = function() {
 
-        //console.log('trying to draw hp');
         game.ctx.fillStyle = this.color;
-        game.ctx.fillText(this.game.hp.toString(), 150, 300);
+        game.ctx.fillText(this.game.hp.toString(), 320, 240);
     
     }; //game_player.draw
  
@@ -149,6 +148,7 @@ game_core.prototype.update = function(t) {
 
 game_core.prototype.process_input = function( player ) {
 
+    console.log("processing inputs");
     var ic = player.inputs.length;
     if(ic) {
         for(var j = 0; j < ic; ++j) {
@@ -188,6 +188,8 @@ game_core.prototype.server_update = function(){
         cis : this.players.other.last_input_seq, 
         t   : this.server_time                  
     };
+    
+    this.process_input(this.players.self);
 
     if(this.players.self.instance) {
         this.players.self.instance.emit( 'onserverupdate', this.laststate );
