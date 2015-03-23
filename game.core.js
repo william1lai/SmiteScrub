@@ -149,7 +149,6 @@ game_core.prototype.update = function(t) {
 
 game_core.prototype.process_input = function( player ) {
 
-    console.log("processing inputs");
     var ic = player.inputs.length;
     if(ic) {
         for(var j = 0; j < ic; ++j) {
@@ -246,6 +245,7 @@ game_core.prototype.client_handle_input = function(){
             server_packet += this.input_seq;
 
         this.socket.send(  server_packet  );
+        this.players.self.process_input();
 
     } else {
         return;// {hp : this.hp};
@@ -350,8 +350,6 @@ game_core.prototype.client_update = function() {
 
     this.ctx.clearRect(0,0,720,480);
     this.client_handle_input();
-
-    this.process_input(this.players.self);
 
     if( !this.naive_approach ) {
         this.client_process_net_updates();
