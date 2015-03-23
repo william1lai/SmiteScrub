@@ -145,14 +145,14 @@ game_core.prototype.update = function(t) {
     this.dt = this.lastframetime ? ( (t - this.lastframetime)/1000.0).fixed() : 0.016;
 
     this.lastframetime = t;
-    this.hp = this.hp - this.decay;
 
     if(!this.server) {
         this.client_update();
     } else {
-        if (this.hp <= 0)
-            this.server.endGame(this.instance.id);
+        this.instance.hp = this.instance.hp - this.decay;
         this.server_update();
+        if (this.instance.hp <= 0)
+            this.server.endGame(this.instance.id);
     }
 
     this.updateid = window.requestAnimationFrame( this.update.bind(this), this.viewport );
@@ -198,6 +198,7 @@ game_core.prototype.process_input = function( player ) {
 
 game_core.prototype.server_update = function(){
 
+    console.log("server update");
     this.server_time = this.local_time;
 
     this.laststate = {
@@ -333,9 +334,9 @@ game_core.prototype.client_process_net_updates = function() {
 
         var latest_server_data = this.server_updates[ this.server_updates.length-1 ];
 
-        //var latest_hp = target.hp;
+        var latest_hp = target.hp;
         //this.players.other.game.hp = latest_hp;
-        //this.players.self.game.hp = latest_hp;
+        this.players.self.game.hp = latest_hp;
         
     } //if target && previous
 
