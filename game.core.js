@@ -104,6 +104,7 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
 
         this.instance = player_instance;
         this.game = game_instance;
+        this.game.hp = 5000;
 
         this.state = 'not-connected';
         this.id = '';
@@ -116,7 +117,7 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
     }; //game_player.constructor
 
         
-    game_player.prototype.draw = function(){
+    game_player.prototype.draw = function() {
 
         console.log('trying to draw hp');
         game.ctx.fillStyle = this.color;
