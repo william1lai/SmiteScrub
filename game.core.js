@@ -126,6 +126,7 @@ game_core.prototype.v_lerp = function(v,tv,t) { return { x: this.lerp(v.x, tv.x,
         if (!this.server)
         {
             game.ctx.fillStyle = this.color;
+            game.ctx.font = "30 px verdana";
             if (this.game.hp <= 0)
                 game.ctx.fillText("0", 320, 240);
             else
