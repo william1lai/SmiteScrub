@@ -175,7 +175,7 @@ game_core.prototype.process_input = function( player ) {
                         player.score = this.hp + this.smite_dmg;
                     }
                     console.log('smite used');
-                    console.log("hp is now " + this.hp);
+                    console.log("hp is now " + player.game.hp);
                 }
             } //for all input values
         } //for each input command
