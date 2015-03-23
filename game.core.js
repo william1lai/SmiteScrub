@@ -189,8 +189,6 @@ game_core.prototype.server_update = function(){
         t   : this.server_time                  
     };
     
-    this.process_input(this.players.self);
-
     if(this.players.self.instance) {
         this.players.self.instance.emit( 'onserverupdate', this.laststate );
     }
@@ -354,6 +352,8 @@ game_core.prototype.client_update = function() {
     if( !this.naive_approach ) {
         this.client_process_net_updates();
     }
+    
+    this.process_input(this.players.self);
 
     //this.players.other.draw();
     this.players.self.draw();
