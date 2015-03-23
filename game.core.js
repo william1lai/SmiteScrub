@@ -41,7 +41,7 @@ if('undefined' != typeof(global)) frame_time = 45; //on server we run at 45ms, 2
         this.input_seq = 0;
         this.hp = 5000;
         this.smite_dmg = 1000;
-        this.decay = 10;
+        this.decay = 16;
 
         if(this.server) {
             this.players = {
