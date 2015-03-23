@@ -328,9 +328,9 @@ game_core.prototype.client_process_net_updates = function() {
 
         var latest_server_data = this.server_updates[ this.server_updates.length-1 ];
 
-        var latest_hp = target.hp;
+        //var latest_hp = target.hp;
         //this.players.other.game.hp = latest_hp;
-        this.players.self.game.hp = latest_hp;
+        //this.players.self.game.hp = latest_hp;
         
     } //if target && previous
 
@@ -359,7 +359,6 @@ game_core.prototype.client_onserverupdate_received = function(data){
 
 game_core.prototype.client_update = function() {
 
-    console.log("refresh client");
     this.ctx.clearRect(0,0,720,480);
     this.client_handle_input();
 
