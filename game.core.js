@@ -154,6 +154,8 @@ game_core.prototype.update = function(t) {
         this.hp = this.hp - this.decay;
         this.client_update();
     } else {
+        if (this.hp < this.instance.hp)
+            this.instance.hp = this.hp;
         this.instance.hp = this.instance.hp - this.decay;
         console.log("server hp: " + this.instance.hp);
         this.server_update();
@@ -229,7 +231,7 @@ game_core.prototype.server_update = function(){
 
 game_core.prototype.handle_server_input = function(client, input, input_time, input_seq) {
     
-    console.log('got input');
+    console.log('got input ' + input);
 
     var player_client =
         (client.userid == this.players.self.instance.userid) ?
