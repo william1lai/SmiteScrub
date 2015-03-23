@@ -136,7 +136,6 @@ game_core.prototype.update = function(t) {
 
     this.lastframetime = t;
 
-    console.log("dt: " + this.dt);
     if(!this.server) {
         this.client_update();
     } else {
@@ -159,9 +158,11 @@ game_core.prototype.process_input = function( player ) {
             var c = input.length;
             for(var i = 0; i < c; ++i) {
                 var key = input[i];
+                console.log(key + " was pressed");
                 if(key == 's') {
                     this.game.hp = this.game.hp - this.smite_dmg;
                 }
+                console.log("hp is now " + this.game.hp);
             } //for all input values
         } //for each input command
     } //if we have inputs
